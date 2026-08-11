@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n = 10, i;
+    long long fib[2 * n + 1];
+    long long sum = 0;
+
+    fib[0] = 0;
+    fib[1] = 1;
+
+    for (i = 2; i <= 2 * n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    for (i = 0; i <= 2 * n; i += 2) {
+        sum += fib[i];
+    }
+
+    printf("Sum of Fibonacci numbers at even indexes: %lld\n", sum);
+    return 0;
+}
