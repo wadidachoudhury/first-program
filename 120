@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    double base, result = 1.0;
+    int exp, i;
+
+    printf("Enter base and exponent: ");
+    scanf("%lf %d", &base, &exp);
+
+    for (i = 1; i <= exp; ++i) {
+        result *= base;
+    }
+
+    printf("Result: %.2lf\n", result);
+    return 0;
+}
