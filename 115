@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int rows = 4, i, j, number = 10;
+    for (i = rows; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            printf("%d ", number--);
+        }
+        printf("\n");
+    }
+    return 0;
+}
